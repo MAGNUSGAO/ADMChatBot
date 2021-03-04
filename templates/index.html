@@ -1,0 +1,55 @@
+<!-- <html>
+  <title> Meters fo Feet </title> 
+  <form method="POST"> 
+    <label> Enter what you want to say!!!!: </label>
+    <input type="text" name="textbox" value = {{user_text | safe}}>  <br>
+    <button type="submit" name="submit">Convert</button>
+
+    <label> ADM Replied: </label>
+    <label> {{output | safe}} </label> <br>
+    
+  </form>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ADM ChatBot 2021</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <!-- Bootstrap CSS from a CDN. This way you don't have to include the bootstrap file yourself -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- Your own stylesheet -->
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+  </head>
+  <body>
+    <!-- add new info to html, always recommended
+    It's the responsive meta tag, allows interaction for phone -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <div class="container d-flex align-items-center h-100">
+      <div class="row col-12">
+         <h1 class="text-center">OUR NEW AI CHATBOT</h1>
+        </header>
+        <div class="buffer col-12"></div>
+        <h1 class="text-center">Enter what you want to say!:</h1><br>
+        <form method="POST"> 
+    		<input type="text" name="textbox" value = {{user_text | safe}}>  <br>
+    		<button type="submit" name="submit">Send your message</button><br>
+    		<h1> ADM Replied: </h1> <br><br>
+    		<!-- <label class="label1"> {{output | safe}} </label> <br> -->
+    		<h1> {{output | safe}} </h1> <br>
+    	</form>
+      </div>
+    </div>
+  </body>
+
+
+</html>
