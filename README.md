@@ -16,13 +16,16 @@ Libraries used: `TFLearn`, `Tensorflow`, `Numpy`
   1. AI Model inspired by Tech With Tim
   2. Intents.json file expanded by the ADM team
   3. Back-end, using Flask, implemented by Magnus Gao
-  4. Deployed on AWS by Magnus Gao
+  4. Deployed on AWS (with `Nginx` and `Gunicorn` as interface) by Magnus Gao 
 
 ## Deployment Options
   1. The first option was Google Cloud. However, deploying on App Engine is more complicated than delploying using other platforms. Considering the complexity of the project, the team decided to use other platforms. (Special thanks to GCP and GCP engineers for supporting MLH!)
   2. The second option was PythonAnywhere. It allows 500MB of hard disk space, which wasn't enough to install our virtual environment.
   3. AWS EC2 was chosen at the end, since its console is similar to Mac's Terminal. 
-  
+ 
+## Known deployment problems
+  1. Tensorflow 2.0.0b cannot automatically be installed via pip3 install -r requirements.txt. Solution: remove Tensorflow from requirements.txt, and install mannually using `pip3 install --no-cache-dirtensorflow` on the command line
+ 
 
 ## Side Note: Useful Commands
 - `sudo service nginx restart` to restart nginx
